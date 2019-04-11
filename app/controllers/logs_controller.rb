@@ -1,12 +1,12 @@
 class LogsController < ApplicationController
   def show
-    filename = "#{Rails.root}/log/development.log"
+    filename = "#{Rails.root}/log/#{Rails.env}.log"
     @logs = IO.readlines(filename).join
     @fd = IO.sysopen(filename)
   end
 
   def get_log_changes
-    lines = read_file("#{Rails.root}/log/development.log", params[:lines].to_i)
+    lines = read_file("#{Rails.root}/log/#{Rails.env}.log", params[:lines].to_i)
     render json: { message: lines }, status: 200
   end
 

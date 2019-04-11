@@ -10,7 +10,11 @@ development:
   <<: *default
   database: logs_cli_development
 
-development:
+test:
   <<: *default
   database: logs_cli_test
+
+production:
+  <<: *default
+  database: logs_cli_production
 

@@ -1,18 +1,18 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.1'
+ruby '2.6.0'
 
 gem 'rails', '~> 5.2.3'
 gem 'jbuilder', '~> 2.5'
 gem 'puma', '~> 3.11'
-gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'rack-cors'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'jwt'
 gem 'kaminari'
 gem 'devise'
+gem 'mina'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
